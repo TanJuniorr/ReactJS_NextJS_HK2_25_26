@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mark's</h1>
+    <input type="text" name="" id="massM">
+    <input type="text" name="" id="heightM">
+
+    <h1>John's</h1>
+    <input type="text" name="" id="massJ">
+    <input type="text" name="" id="heightJ">
+    <button id="btnEnter">Enter</button>
+    
+    <script>
+
+        var btnEnter = document.getElementById("btnEnter");
+        btnEnter.onclick = () => {
+            var massM = document.getElementById("massM");
+            var heightM = document.getElementById("heightM");
+
+            var massJ = document.getElementById("massJ");
+            var heightJ = document.getElementById("heightJ");
+
+            var markHigherBMI = true;
+
+            var bmiM = massM / (heightM * heightM);
+            var bmiJ = massJ / (heightJ * heightJ);
+
+            if(bmiM < bmiJ) markHigherBMI = false 
+            else markHigherBMI = true
+
+            if(markHigherBMI) console.log("True");
+            else console.log("false");
+        }
+
+        
+
+
+
+
+    </script>
+
+</body>
+</html>
