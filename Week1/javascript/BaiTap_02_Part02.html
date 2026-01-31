@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btnCalc">Calculate Tip</button>
+
+    <script>
+
+    
+        document.getElementById("btnCalc").addEventListener("click", function() {
+                function calcTip(bill) {
+                var tip = (bill >= 50 && bill <= 300) ? (bill * 0.15) : (bill * 0.2);
+                return tip;
+            }
+
+            let bills = [125, 555, 44];
+            let total = [];
+            let tips = [];
+
+            for (let i = 0; i < bills.length; i++) {
+                tips.push(calcTip(bills[i]));
+                total.push(bills[i] + tips[i]);
+            }
+            console.log("Tips:", tips);
+            console.log("Total: ", total);
+        });
+    </script>
+
+</body>
+</html>
