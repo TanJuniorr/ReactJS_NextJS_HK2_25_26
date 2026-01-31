@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Mark's</h1>
+    <input type="text" name="" id="massM">
+    <input type="text" name="" id="heightM">
+
+    <h1>John's</h1>
+    <input type="text" name="" id="massJ">
+    <input type="text" name="" id="heightJ">
+    <button id="btnEnter">Enter</button>
+    
+    <script>
+
+        btnEnter.onclick = () => {
+
+            function calcBMI(Person) {
+                var bmi = Person.mass / (Person.height * Person.height);
+                return bmi;
+            }
+
+            let Mark = {
+                name : "Mark Mille",
+                mass : document.getElementById("massM").value,
+                height : document.getElementById("heightM").value
+            }
+
+            let John = {
+                name : "John Smith",
+                mass : document.getElementById("massJ").value,
+                height : document.getElementById("heightJ").value
+            }
+
+            if(calcBMI(Mark) > calcBMI(John)) console.log("Mark's BMI (" + calcBMI(Mark) + ") is higher than John's (" + calcBMI(John) + ")!");
+            else if (calcBMI(John) > calcBMI(Mark)) console.log("John's BMI (" + calcBMI(John) + ") is higher than Mark's (" + calcBMI(Mark) + ")!");
+            else console.log("No anyone");
+        }
+    </script>
+
+</body>
+</html>
