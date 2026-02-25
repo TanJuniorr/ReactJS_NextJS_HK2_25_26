@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
+import Bai1_ProductCard from "./pages/Bai1_ProductCard"
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [page, setPage] = useState("bai1")
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div>
+      <div
+        style={{
+          padding: "15px",
+          background: "#000000",
+          display: "flex",
+          gap: "10px",
+        }}
+      >
+        <button
+          onClick={() => setPage("bai1")}
+          style={{
+            padding: "8px 14px",
+            cursor: "pointer",
+            border: "none",
+          }}
+        >
+          Bài 1
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+      {page === "bai1" && <Bai1_ProductCard />}
+    </div>
   )
 }
-
-export default App
