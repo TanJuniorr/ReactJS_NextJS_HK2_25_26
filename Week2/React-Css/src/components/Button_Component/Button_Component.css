@@ -1,0 +1,33 @@
+.button{
+
+}
+
+.ButtonComponent{
+    width: 200px;
+    padding: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-primary{
+    background-color: rgb(100, 100, 255);
+}
+
+.btn-danger{
+    background-color: rgb(255, 100, 100);
+}
+
+.btn-success{
+    background-color: rgb(76, 133, 76);
+}
+
+.btn-primary:hover{
+    background-color: blue;
+}
+
+.btn-danger:hover{
+    background-color: red;
+}
+
+.btn-success:hover{
+    background-color: green;
+}

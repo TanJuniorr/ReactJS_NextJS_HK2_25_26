@@ -21,6 +21,7 @@
 .product-name {
   margin: 12px 0 6px;
   font-size: 18px;
+  color: #3c39e6;
 }
 
 .product-price {
@@ -35,8 +36,6 @@
   border-radius: 8px;
   background: #1d3557;
   color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 .product-btn:hover {
